@@ -1,0 +1,141 @@
+:root {
+  --font-main: 'Segoe UI', 'Inter', system-ui, sans-serif;
+  --color-primary: #005a9c; /* Dark blue */
+  --color-accent: #ffc107; /* Amber */
+  --color-text: #212529;
+  --color-bg: #f8f9fa;
+  --color-muted: #6c757d;
+  --color-link: #0077cc;
+  --color-link-hover: #005a9c;
+  --color-button: #005a9c;
+  --color-button-hover: #003f6b;
+  --color-border: #ced4da;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  font-family: var(--font-main);
+  font-weight: 400;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-link);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: transform 0.3s ease, filter 300ms;
+}
+.logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 2em var(--color-accent));
+}
+
+.card {
+  padding: 2em;
+  background: white;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.read-the-docs {
+  color: var(--color-muted);
+  font-size: 0.9em;
+}
+
+button {
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-button);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+button:hover {
+  background-color: var(--color-button-hover);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1a1a1a;
+    --color-text: #eaeaea;
+    --color-border: #333;
+    --color-card: #2c2c2c;
+    --color-link: #4dabf7;
+    --color-link-hover: #339af0;
+    --color-button: #005a9c;
+    --color-button-hover: #003f6b;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  .card {
+    background: var(--color-card);
+    color: var(--color-text);
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  .logo {
+    height: 4em;
+  }
+  #app {
+    padding: 1rem;
+  }
+  button {
+    width: 100%;
+    padding: 0.8em;
+    font-size: 1.2em;
+  }
+}
